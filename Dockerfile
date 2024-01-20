@@ -1,10 +1,9 @@
 FROM php:8.0.0-apache
 
 # Instalar extensiones PHP necesarias
-RUN docker-php-ext-install mysqli \
-    && docker-php-ext-install mbstring \
-    && docker-php-ext-install zip \
-    && docker-php-ext-install gd
+RUN apt-get update && \
+    apt-get install -y libonig-dev && \
+    docker-php-ext-install mbstring
 
 # Habilitar el módulo de Apache para rewrite
 RUN a2enmod rewrite
