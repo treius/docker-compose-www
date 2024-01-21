@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agradecimiento</title>
+    <link rel="stylesheet" href="css/agradecimiento.css">
+    <script src="js/script-gracias.js"></script>
 </head>
 
 <body>
-    <h2>¡Gracias por ponerte en contacto!</h2>
-    <p>Nos pondremos en contacto contigo pronto.</p>
-</body>
+    <header>
+        <div class="language-selector">
+            <select id="language-selector" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>        
+    </header>
+    <nav id="nav-text">
+        <ul>
+            <li><a href="aboutme.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main id="main-text">
+        <h2>¡Gracias por ponerse en contacto!</h2>
+        <p>Me pondré en contacto con usted pronto.</p>
+    </main>
+    <footer>
+        <p id="copyright">&copy; 2024 Alberto Valero Mlynaricova - Sitio desarrollado con pasión por la programación
+        </p>
+    </footer>
 
+    <script src="js/script.js"></script>
+</body>
 </html>
