@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    /*background-image: url("../images/missing_textures.png");
+    background-repeat: repeat; /* Para evitar que la imagen se repita */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Eliminar scroll */
+}
+
+header {
+    /*background-color: rgb(237, 220, 244);*/
+    background-image: url("../images/missing_textures.png");
+    background-repeat: repeat; /* Para evitar que la imagen se repita */
+    padding: 2vh 0; /* Ajustado a unidades de vista de altura */
+    position: relative;
+}
+
+.language-selector {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1vh 0; /* Ajustado a unidades de vista de altura */
+    margin-bottom: 10px; /* Ajusta según sea necesario */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1.5vw; /* Ajustado a unidades de ancho de vista */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+nav li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav li:hover {
+    color: rgb(190, 0, 220);
+    font-weight: bold;
+}
+
+main {
+    color: #333;
+    text-align: center;
+}
+
+.error-image {
+    max-width: 15%;
+    height: auto;
+}
+
+footer {
+    /*background-color: rgb(237, 220, 244);*/
+    background-image: url("../images/missing_textures.png");
+    background-repeat: repeat; /* Para evitar que la imagen se repita */
+    text-align: center;
+    padding: 2vh; /* Ajustado a unidades de vista de altura */
+    margin-top: auto;
+    width: 100%;
+}
