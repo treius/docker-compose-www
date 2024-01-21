@@ -1,27 +1,24 @@
-/* contacto.css */
+/* RESET ESTILOS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
 
+/* ESTILOS GENÉRICOS*/  
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    overflow: hidden; /* Eliminar scroll */
+    color: #333;
 }
 
 header {
     background-color: rgb(237, 220, 244);
-    text-align: center;
-    padding: 2vh 0; /* Ajustado a unidades de vista de altura */
-    position: relative;
-}
-
-.language-selector {
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    transform: translateY(-50%);
+    padding: 2vh 2vh; /* Ajustado a unidades de vista de altura */
 }
 
 nav {
@@ -29,15 +26,12 @@ nav {
     color: #fff;
     text-align: center;
     padding: 1vh 0; /* Ajustado a unidades de vista de altura */
-    margin-bottom: 10px; /* Ajusta según sea necesario */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
 }
 
 nav li {
@@ -45,7 +39,6 @@ nav li {
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
 
 nav li a {
     text-decoration: none;
@@ -57,17 +50,24 @@ nav li:hover {
     font-weight: bold;
 }
 
+h1 {
+    font-weight: bold;
+    font-size: 2em; /* Puedes ajustar el tamaño según tus preferencias */
+    color: black;
+}
+
 .contenedor-formulario {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 60vh;
-    margin: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 form {
-    width: 80%; /* Puedes ajustar el porcentaje según sea necesario */
-    max-width: 25%; /* También puedes establecer un ancho máximo si lo deseas */
+    /*width: 80%;*/
+    max-width: 80%;
     margin: 0 auto; /* Centra el formulario */
     padding: 2%;
     background-color: #fff;
@@ -83,9 +83,12 @@ label {
 input,
 textarea {
     width: 100%;
+    max-width: 100%;
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
@@ -105,6 +108,64 @@ footer {
     background-color: rgb(237, 220, 244);
     text-align: center;
     padding: 2vh; /* Ajustado a unidades de vista de altura */
-    margin-top: auto;
+    /*margin-top: auto;
+    margin-bottom: 0;*/
     width: 100%;
+}
+
+/*ESTILOS MÓVIL*/
+@media (min-width: 360px) and (max-width: 767px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/*ESTILOS TABLET*/
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        text-align: left;
+        position: relative;
+    }
+    .language-selector {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+/*ESTILOS PC*/
+@media (min-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        text-align: center;
+        position: relative;
+    }
+
+    .language-selector {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
 }
