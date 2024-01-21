@@ -17,7 +17,7 @@ header {
     position: relative;
 }
 
-#language-selector {
+.language-selector {
     position: absolute;
     top: 50%;
     right: 2%;
