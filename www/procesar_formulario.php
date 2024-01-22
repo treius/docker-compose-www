@@ -4,15 +4,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $correo = $_POST["correo"];
     $mensaje = $_POST["mensaje"];
 
-    $destinatario = "treius@avalerom.es"; // Cambia esto con tu dirección de correo electrónico
+    $destinatario = "correo@example.es"; // Cambia esto con tu dirección de correo electrónico
 
     $asunto = "Nuevo mensaje de contacto de $nombre";
-    $cuerpoMensaje = "Nombre: $nombre\nCorreo Electrónico: $correo\nMensaje:\n$mensaje";
+    $mensaje = "Nombre: $nombre\nCorreo Electrónico: $correo\nMensaje:\n$mensaje";
 
-    // Enviar el correo
-    mail($destinatario, $asunto, $cuerpoMensaje);
+    // Usar el comando mail en una línea de PHP
+    $resultado = shell_exec("echo '$mensaje' | mail -s '$asunto' '$destinatario'");
 
-    // Redirigir a una página de agradecimiento o mostrar un mensaje de éxito
-    header("Location: gracias.html");
-    exit();
+    if ($resultado) {
+        header("Location: gracias.html");
+        exit();
+    } else {
+        echo "Este servicio no se encuentra actualmente disponible, disculpe las molestias";
+        // header("Location: error.html");
+        // exit();
+    }
 }
+
