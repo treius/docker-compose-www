@@ -10,5 +10,5 @@ services:
       - "443:443"
     volumes:
       - ./www:/var/www/html
-      - ./ssl:/etc/apache2/ssl  # Asegúrate de agregar este volumen
+      - ./ssl:/etc/apache2/ssl
     restart: always
