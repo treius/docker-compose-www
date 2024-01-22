@@ -8,6 +8,12 @@ RUN apt-get update && \
 # Habilitar el módulo de Apache para rewrite
 RUN a2enmod rewrite
 
+# Habilitar el módulo SSL
+RUN a2enmod ssl
+
+# Instalar Postfix sin interacciones interactivas
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y postfix
+
 # Copiar la configuración personalizada de errores a Apache
 COPY custom-error.conf /etc/apache2/conf-available/
 RUN a2enconf custom-error
