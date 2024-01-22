@@ -1,20 +1,24 @@
+/* RESET ESTILOS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENÉRICOS*/  
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    /*background-image: url("../images/missing_textures.png");
-    background-repeat: repeat; /* Para evitar que la imagen se repita */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    overflow: hidden; /* Eliminar scroll */
 }
 
 header {
-    /*background-color: rgb(237, 220, 244);*/
     background-image: url("../images/missing_textures.png");
-    background-repeat: repeat; /* Para evitar que la imagen se repita */
-    padding: 2vh 0; /* Ajustado a unidades de vista de altura */
+    background-repeat: repeat;
+    padding: 2vh 2vh; /* Ajustado a unidades de vista de altura */
     position: relative;
 }
 
@@ -29,8 +33,10 @@ nav {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1vh 0; /* Ajustado a unidades de vista de altura */
-    margin-bottom: 10px; /* Ajusta según sea necesario */
+    padding: 1vh 0;
+    /* Ajustado a unidades de vista de altura */
+    margin-bottom: 10px;
+    /* Ajusta según sea necesario */
 }
 
 nav ul {
@@ -61,19 +67,83 @@ nav li:hover {
 main {
     color: #333;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .error-image {
-    max-width: 15%;
+    max-width: 25%;
     height: auto;
 }
 
 footer {
-    /*background-color: rgb(237, 220, 244);*/
     background-image: url("../images/missing_textures.png");
-    background-repeat: repeat; /* Para evitar que la imagen se repita */
+    background-repeat: repeat;
     text-align: center;
-    padding: 2vh; /* Ajustado a unidades de vista de altura */
+    padding: 2vh;
     margin-top: auto;
     width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+/*ESTILOS MÓVIL*/
+@media (min-width: 360px) and (max-width: 767px) {
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/*ESTILOS TABLET*/
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        text-align: left;
+        position: relative;
+    }
+    .language-selector {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/*ESTILOS PC*/
+@media (min-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        text-align: center;
+        position: relative;
+    }
+
+    .language-selector {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
 }
