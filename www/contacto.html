@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1>CONTACTO</h1>
+        <h1 id="header-text">CONTACTO</h1>
         <div class="language-selector">
             <select id="language-selector" onchange="changeLanguage()">
                 <option value="es">Español</option>
@@ -27,7 +27,7 @@
     </nav>
     <main>
         <div class="contenedor-formulario">
-            <form action="procesar_formulario.php" method="post">
+            <form action="procesar_formulario.php" method="post" id="formulario">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
         
@@ -42,8 +42,7 @@
         </div>
     </main>
     <footer>
-        <p id="copyright">&copy; 2024 Alberto Valero Mlynaricova - Sitio desarrollado con pasión por la programación
-        </p>
+        <p id="copyright">&copy; 2024 Alberto Valero Mlynaricova - Sitio desarrollado con pasión por la programación</p>
     </footer>
 </body>
 </html>
